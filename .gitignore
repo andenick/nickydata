@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NickyData runtime artifacts
+data/raw-data/
+data/int-data/
+data/final-data/
+data/adjusted-final-data/
+data/scratch/
+outputs/
+logs/
+*.log
+
+# API keys
+.env
+api_keys.env

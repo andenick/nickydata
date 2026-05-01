@@ -1,0 +1,49 @@
+{
+  "project_name": "SFC vs DSGE: Fiscal Policy Transmission",
+  "registry_version": "1.0.0",
+  "language": "python",
+  "created_date": "2026-04-26T00:00:00Z",
+
+  "studies": {
+    "STUDY_01": {
+      "name": "SFC vs DSGE Fiscal Policy Comparison",
+      "research_question": "How do SFC and DSGE models differ in their predictions of US government spending multipliers, 1990-2025?",
+      "datasets": ["fred_quarterly", "bea_nipa"],
+      "estimation_methods": ["bayesian_sfc", "bayesian_dsge"],
+      "comparison_metrics": ["impulse_response", "fiscal_multiplier_4q", "fiscal_multiplier_8q"],
+      "status": "Implemented (reference)"
+    }
+  },
+
+  "datasets": {
+    "fred_quarterly": {
+      "source": "FRED",
+      "raw_path": "data/raw-data/fred_quarterly.csv",
+      "description": "Quarterly US macro data 1990-2025: GDP, CPI, unemployment, fed funds, govt consumption",
+      "series": [
+        {"id": "GDPC1", "name": "Real GDP", "freq": "Q"},
+        {"id": "CPIAUCSL", "name": "CPI", "freq": "M->Q"},
+        {"id": "UNRATE", "name": "Unemployment Rate", "freq": "M->Q"},
+        {"id": "FEDFUNDS", "name": "Fed Funds Rate", "freq": "M->Q"},
+        {"id": "GCEC1", "name": "Real Government Consumption", "freq": "Q"}
+      ]
+    },
+    "bea_nipa": {
+      "source": "BEA NIPA",
+      "raw_path": "data/raw-data/bea_nipa.csv",
+      "description": "BEA NIPA tables for government spending decomposition",
+      "tables": ["3.1", "3.9.5"]
+    }
+  },
+
+  "model_priors": {
+    "sfc_priors": {
+      "consumption_propensity": {"prior": "Beta(0.7, 0.1)", "source": "Godley & Lavoie 2007"},
+      "fiscal_response": {"prior": "Normal(0, 0.5)", "source": "study choice"}
+    },
+    "dsge_priors": {
+      "calvo_price": {"prior": "Beta(0.75, 0.05)", "source": "Smets-Wouters 2007"},
+      "habit_persistence": {"prior": "Beta(0.5, 0.1)", "source": "Smets-Wouters 2007"}
+    }
+  }
+}
