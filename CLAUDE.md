@@ -48,6 +48,6 @@ This is essentially MCP principles applied to research workflow: secure data rou
 
 One of four repositories demonstrating AI-driven economic research:
 1. **[hdarp](https://github.com/andenick/hdarp)** — Input layer
-2. **[anu-suite](https://github.com/andenick/anu-suite)** — Protocol layer
+2. **[anu-data-framework](https://github.com/andenick/anu-data-framework)** — Protocol layer
 3. **nickydata** (this repo) — Reproducibility layer
 4. **[capitalism-data](https://github.com/andenick/capitalism-data)** — Demonstration at scale
