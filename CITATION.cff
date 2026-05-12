@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "NickyData: Reproducible Research Pipeline Architecture"
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: Anderson
+    given-names: Nicholas
+repository-code: "https://github.com/andenick/nickydata"
+license: MIT
+version: "1.0"
+date-released: "2026-05-01"

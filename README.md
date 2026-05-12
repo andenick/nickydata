@@ -4,6 +4,22 @@
 
 ---
 
+## Quick Start
+
+```bash
+git clone https://github.com/andenick/nickydata.git
+cd nickydata
+pip install -e .
+
+# Run the reference study (SFC vs DSGE models on US fiscal data)
+cd studies/sfc_vs_dsge
+pip install -r requirements.txt
+python run.py --dry-run    # See the plan
+python run.py              # Full pipeline (~3-5 minutes with FRED API key)
+```
+
+---
+
 ## What NickyData Solves
 
 When an AI agent helps you build an empirical research project — panel econometrics, time-series analysis, dissertation work — three things break down:
